@@ -1,11 +1,14 @@
-describe('airport',function() {
+describe('Airport',function() {
   var airport;
+  var plane;
 
   beforeEach(function() {
-    airport = new airport();
+    airport = new Airport();
+    plane = "plane";
   });
 
   it('can instruct a plane to land', function() {
-    expect(airport.landPlane).toBeTrue;
+    airport.land(plane);
+    expect(airport.hasPlane).toBe(true);
   });
 });
